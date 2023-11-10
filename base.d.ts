@@ -1,3 +1,4 @@
+import { SupabaseClient } from '@supabase/supabase-js';
 type Config = {
     version?: string;
     basePath?: string;
@@ -12,6 +13,7 @@ export declare abstract class Base {
     private defaultVersion;
     private defaultBaseURL;
     private authToken;
+    protected supabase: SupabaseClient;
     constructor(config: Config);
     protected request<T>(endpoint: string, auth?: boolean, options?: RequestInit): Promise<T>;
     protected setAuthToken(token: string): void;

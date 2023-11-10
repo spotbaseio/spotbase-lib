@@ -163,3 +163,11 @@ export type Config = {
     states?: States;
     urlParams?: URLParams;
 };
+export type Addon = {
+    id: string;
+    name: string;
+    project: string;
+    type: string;
+    user_id: string;
+    data: string;
+};
